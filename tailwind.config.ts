@@ -19,6 +19,8 @@ module.exports = {
       },
     },
     extend: {
+
+  
       // colors: {
       //   primary: {
       //     500: '#624CF5',

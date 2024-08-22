@@ -49,7 +49,7 @@ const StepLabel = ({
 			aria-current={isCurrentStep ? "step" : undefined}
 			className={cn(
 				"stepper__step-label-container",
-				"flex-col flex",
+				"flex-col flex text-4xl px-4 font-bold",
 				variant !== "line" ? "ms-2" : orientation === "horizontal" && "my-2",
 				variant === "circle-alt" && "text-center",
 				variant === "circle-alt" && orientation === "horizontal" && "ms-0",

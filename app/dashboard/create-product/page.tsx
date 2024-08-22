@@ -1,13 +1,14 @@
-'use client'
-import React from 'react';
+"use client";
 
+import React from 'react';
 import { useForm } from 'react-hook-form';
 import { Upload } from 'lucide-react'; // Assuming lucide-react is installed for icons
 import FileUploader from '@/components/shared/CreateProductPage/FileUploader';
 import Input from '@/components/shared/CreateProductPage/Input';
 import TextArea from '@/components/shared/CreateProductPage/TextArea';
 import ProductsPage from '@/components/shared/explore/ProductsPage';
-
+import { FancyMultiSelect } from '@/components/shared/FancyMultiSelect';
+import { CATEGORY } from '@/constants/data';
 
 const CreateProduct = () => {
   const { register, handleSubmit } = useForm();
@@ -19,7 +20,7 @@ const CreateProduct = () => {
 
   return (
     <div className="bg-zinc-100 min-h-screen">
-      <div className="container w-full   p-4 md:p-8">
+      <div className="container w-full p-4 md:p-8">
         <h1 className="text-4xl font-bold mb-8 text-gray-700 text-center">Create Something New</h1>
         <form onSubmit={handleSubmit(onSubmit)} className="bg-white p-2 md:p-8 rounded-lg shadow-lg">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-6">
@@ -33,9 +34,8 @@ const CreateProduct = () => {
             <TextArea label="Input Product Description" name="productDescription" register={register} />
           </div>
           <h2 className="text-2xl font-semibold mb-4 text-gray-700">Input Product Category</h2>
-          
-          <ProductsPage/>
-      
+          <FancyMultiSelect options={CATEGORY} initialSelected={CATEGORY.slice(1, 2)} placeholder="Select Category..." />
+
           <h2 className="text-2xl font-semibold mb-4 text-gray-700">Your Product Highlights</h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-6">
             {[...Array(8)].map((_, index) => (

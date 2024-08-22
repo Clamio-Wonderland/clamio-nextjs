@@ -2,6 +2,8 @@
 import { useDispatch } from 'react-redux';
 import { updateQuantity, removeFromCart } from '@/utils/cartSlice';
 import Image from 'next/image';
+import { toast } from 'sonner';
+
 
 function CartItem({ item }) {
     const dispatch = useDispatch();
@@ -9,15 +11,17 @@ function CartItem({ item }) {
     const handleQuantityChange = (amount) => {
         if (item.quantity + amount >= 0) {
             dispatch(updateQuantity({ id: item.id, amount }));
+            toast.success(`Quantity ${amount > 0 ? 'increased' : 'decreased'} by ${Math.abs(amount)}`);
         }
     };
 
     const handleRemove = () => {
         dispatch(removeFromCart(item.id));
+        toast.error(`Item ${item.productName} removed from cart`);
     };
 
     return (
-        <div className="grid grid-cols-4 items-center border-b py-4">
+        <div className="grid grid-cols-4 gap-3 items-center border-b py-4">
             <div className="col-span-1 flex justify-center">
                 <Image
                     src={item.imageUrl}

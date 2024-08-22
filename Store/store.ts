@@ -8,6 +8,7 @@ import communityReducer from '@/utils/communitySlice';
 import loginTypeReducer from '@/utils/loginTypeSlice';
 import thunk from 'redux-thunk';
 import wishlistReducer from '@/utils/wishlistSlice';
+import addressReducer from '@/utils/addressSlice';
 import storage from 'redux-persist/lib/storage';
 import { persistReducer, persistStore } from 'redux-persist';
 
@@ -16,6 +17,7 @@ const persistConfig = {
     version: 1,
     storage,
     middleware: [thunk],
+    blacklist: ['cart'], // Exclude cart from persistence
 };
 
 const rootReducer = combineReducers({
@@ -26,6 +28,7 @@ const rootReducer = combineReducers({
     wishlist: wishlistReducer,
     creator: creatorReducer,
     loginType: loginTypeReducer,
+    address: addressReducer,
 });
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);

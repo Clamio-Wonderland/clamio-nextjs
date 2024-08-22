@@ -14,6 +14,7 @@ import {
   NotebookTabs,
   CreditCard,
   BarChartBig,
+  BadgePlus,
 } from "lucide-react";
 import {
   DropdownMenu,
@@ -80,6 +81,12 @@ const moreLinks = [
     label: "Product Listing",
     route: "/dashboard/product-listing",
     icon: <NotebookTabs className="h-6 w-6" />,
+    variant: "ghost",
+  },
+  {
+    label: "Create Community",
+    route: "/dashboard/create-community",
+    icon: <BadgePlus className="h-6 w-6" />,
     variant: "ghost",
   },
 ];

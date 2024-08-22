@@ -19,6 +19,7 @@ const SignUp = () => {
   const router = useRouter();
   const [showPassword, setShowPassword] = useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = useState(false);
+  const [hasReferralCode, setHasReferralCode] = useState(false);
   const isCreatorLogin = useSelector((store: RootState) => store.loginType.isCreatorLogin);
 
   const {
@@ -52,21 +53,20 @@ const SignUp = () => {
     }
   };
 
-
   return (
     <div className="flex items-center justify-center h-screen w-screen bg-secondary overflow-hidden">
       <div className="w-11/12 sm:w-3/4 md:w-1/2 lg:w-1/3 xl:w-1/4 rounded-lg bg-white p-5">
-      <div className="flex items-center justify-end  space-x-2">
-           <Switch
-              checked={isCreatorLogin}
-              className="border-black"
-              onCheckedChange={() => dispatch(toggleLoginType())}
-            />
-          </div>
-          <h1 className="text-center pb-3 text-xl font-bold">
+        <div className="flex items-center justify-end space-x-2">
+          <Switch
+            checked={isCreatorLogin}
+            className="border-black"
+            onCheckedChange={() => dispatch(toggleLoginType())}
+          />
+        </div>
+        <h1 className="text-center pb-3 text-xl font-bold">
           {isCreatorLogin ? "Signup as Creator" : "Create Your Account"}
         </h1>
-    
+
         <form onSubmit={handleSubmit(onSubmit)} className="mx-6">
           <label className="block text-md py-2 font-semibold">Username*</label>
           <input
@@ -154,6 +154,46 @@ const SignUp = () => {
             <p className="text-red-500 text-sm">
               {errors.confirmPassword.message}
             </p>
+          )}
+
+          <label className="block text-md py-2 font-semibold">
+            Do you have a referral code?
+          </label>
+          <div className="flex items-center space-x-4 mb-4">
+            <label className="flex items-center">
+              <input
+                type="radio"
+                value="yes"
+                checked={hasReferralCode === true}
+                onChange={() => setHasReferralCode(true)}
+                className="mr-2"
+              />
+              Yes
+            </label>
+            <label className="flex items-center">
+              <input
+                type="radio"
+                value="no"
+                checked={hasReferralCode === false}
+                onChange={() => setHasReferralCode(false)}
+                className="mr-2"
+              />
+              No
+            </label>
+          </div>
+
+          {hasReferralCode && (
+            <div>
+              <label className="block text-md py-2 font-semibold">
+                Referral Code
+              </label>
+              <input
+                type="text"
+                {...register("referralCode")}
+                className="mb-2 h-12 w-full rounded-lg border-2 border-black px-5 text-sm placeholder-gray-400"
+                placeholder="Enter your referral code"
+              />
+            </div>
           )}
 
           <p className="text-xs text-gray-400 mx-1">

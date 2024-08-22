@@ -1,5 +1,6 @@
 import React from 'react';
 import {
+  BadgePlus,
   BarChartBig,
   BugPlay,
   ChevronDown,
@@ -77,6 +78,11 @@ const headerLinksDashboard = [
     label: 'Payouts',
     route: '/dashboard/payouts',
     icon: <Keyboard className="h-4 w-4" />,
+  },
+  {
+    label: 'Create Community',
+    route: '/dashboard/create-community',
+    icon: <BadgePlus className="h-4 w-4" />,
   },
   {
     label: 'Followers',

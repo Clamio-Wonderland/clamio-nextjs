@@ -5,7 +5,7 @@ import { Nav } from "@/components/ui/nav";
 
 type Props = {};
 
-import { LayoutDashboard, UserCheck, ShoppingCart, Settings, UsersRound, Gift, Heart,ChevronRight,CreditCard, Keyboard,NotebookTabs,BarChartBig } from 'lucide-react';
+import { LayoutDashboard, UserCheck, ShoppingCart, Settings, UsersRound, Gift, Heart,ChevronRight,CreditCard, Keyboard,NotebookTabs,BarChartBig, BadgePlus } from 'lucide-react';
 import { Button } from "@/components/ui/button";
 
 import { useWindowWidth } from "@react-hook/window-size";
@@ -93,6 +93,12 @@ export default function SideNavbar({}: Props) {
       title: "Rewards",
       href: "/dashboard/reward",
       icon: Gift,
+      variant: "ghost",
+    },
+    {
+      title: "Create Community",
+      href: "/dashboard/create-community",
+      icon: BadgePlus,
       variant: "ghost",
     },
   ]}

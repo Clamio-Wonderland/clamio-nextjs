@@ -224,26 +224,257 @@ export const categoryData = [
 //Product Data
 //Top Selling Product Data
 export const TopSellingproductData = [
-  { id: 1, productName: "Mystic Tarot Reading", name: "Luna Lovegood", stars: "4.8", price: "$15", imageUrl: "/assets/product-img/imgone.png" },
-  { id: 2, productName: "Paris Travel Guide", name: "John Doe", stars: "4.5", price: "$20", imageUrl: "/assets/product-img/imgone.png" },
-  { id: 3, productName: "Italian Pasta Recipes", name: "Gordon Ramsay", stars: "4.9", price: "$30", imageUrl: "/assets/product-img/imgone.png" },
-  { id: 4, productName: "Keto Diet Plan", name: "Jane Smith", stars: "4.6", price: "$25", imageUrl: "/assets/product-img/imgone.png" },
-
+  {
+    id: 1,
+    productName: "Mystic Tarot Reading",
+    name: "Luna Lovegood",
+    stars: "4.8",
+    price: "$15",
+    imageUrl: "/assets/product-img/imgone.png",
+    description: "An insightful tarot reading session with Luna Lovegood, offering clarity and guidance on various life issues . An insightful tarot reading session with Luna Lovegood, offering clarity and guidance on various life issue",
+    reviews: [
+      { title: "Great reading", content: "Very insightful and accurate. I felt like Luna really understood my situation and provided clarity on issues that I have been struggling with for a while.", stars: 5 },
+      { title: "Amazing", content: "Loved every bit of the reading. It was so detailed and personalized. Luna's reading gave me a lot of peace and hope.", stars: 5 },
+      { title: "Not bad", content: "It was okay, not too great. Some parts resonated with me but others didn't seem relevant to my life at all.", stars: 3 },
+      { title: "Accurate", content: "Pretty accurate and detailed. I was surprised at how much she got right about my current circumstances and future prospects.", stars: 4 },
+      { title: "Helpful", content: "Helped me a lot in understanding things. Her advice was practical and I could see how to apply it in my life.", stars: 5 },
+      { title: "Insightful", content: "Very deep and meaningful reading. I appreciated the depth and thoughtfulness of her interpretations.", stars: 4 },
+      { title: "Fantastic", content: "Absolutely fantastic experience. Luna is a true professional and has a real gift.", stars: 5 },
+      { title: "Good", content: "Good reading, satisfied. It was worth the time and money.", stars: 4 },
+      { title: "Average", content: "It was an average reading. I didn't find anything particularly enlightening but it was interesting nonetheless.", stars: 3 },
+      { title: "Excellent", content: "Excellent reading, highly recommend. Luna is truly gifted and her readings are spot on.", stars: 5 },
+    ]
+  },
+  {
+    id: 2,
+    productName: "Paris Travel Guide",
+    name: "John Doe",
+    stars: "4.5",
+    price: "$20",
+    imageUrl: "/assets/product-img/imgone.png",
+    description: "A comprehensive travel guide to Paris, covering must-see attractions, hidden gems, and practical tips for travelers. An insightful tarot reading session with Luna Lovegood, offering clarity and guidance on various life issue",
+    reviews: [
+      { title: "Very Helpful", content: "The guide was very detailed and helpful. It covered everything from must-see attractions to hidden gems that aren't crowded with tourists.", stars: 5 },
+      { title: "Loved it", content: "Loved the tips and tricks. The guide made my trip to Paris so much easier and enjoyable. I felt like I was exploring with a local.", stars: 5 },
+      { title: "Not what I expected", content: "Expected more details. Some sections were quite brief and lacked the depth I was hoping for.", stars: 3 },
+      { title: "Informative", content: "Very informative guide. It provided a lot of historical context which made visiting the sites more meaningful.", stars: 4 },
+      { title: "Great Guide", content: "Great travel guide for Paris. It was well-organized and easy to follow.", stars: 5 },
+      { title: "Helpful Tips", content: "The tips were very helpful. I particularly appreciated the restaurant recommendations which were spot on.", stars: 4 },
+      { title: "Good Guide", content: "Good guide, worth the money. It helped me plan my itinerary efficiently.", stars: 4 },
+      { title: "Okay", content: "It was okay, could have been better. Some sections were repetitive and not very useful.", stars: 3 },
+      { title: "Very Informative", content: "Very informative and detailed. It made navigating Paris a breeze.", stars: 5 },
+      { title: "Nice Guide", content: "Nice guide with good information. The maps were particularly useful.", stars: 4 },
+    ]
+  },
+  {
+    id: 3,
+    productName: "Italian Pasta Recipes",
+    name: "Gordon Ramsay",
+    stars: "4.9",
+    price: "$30",
+    imageUrl: "/assets/product-img/imgone.png",
+    description: "A collection of authentic Italian pasta recipes by Gordon Ramsay, perfect for both novice and experienced cooks.An insightful tarot reading session with Luna Lovegood, offering clarity and guidance on various life issue",
+    reviews: [
+      { title: "Delicious recipes", content: "Easy to follow and delicious recipes. I've tried several so far and each one has been a hit with my family.", stars: 5 },
+      { title: "Love it", content: "Love the recipes. Gordon Ramsay really knows his stuff and his passion for cooking comes through in every recipe.", stars: 5 },
+      { title: "Great!", content: "Great recipes, very tasty. The instructions are clear and the results are always impressive.", stars: 5 },
+      { title: "Good", content: "Good recipes, easy to make. Even a novice cook like me can create restaurant-quality dishes.", stars: 4 },
+      { title: "Fantastic", content: "Fantastic recipes, love it. Each dish is a masterpiece and a joy to make.", stars: 5 },
+      { title: "Yummy", content: "Yummy and easy to make. My kids especially love the creamy Alfredo pasta.", stars: 5 },
+      { title: "Good Book", content: "Good recipe book. It has become a staple in my kitchen.", stars: 4 },
+      { title: "Excellent", content: "Excellent recipes, highly recommend. These dishes are perfect for entertaining guests.", stars: 5 },
+      { title: "Nice", content: "Nice recipes, very detailed. The step-by-step instructions make it easy to follow along.", stars: 4 },
+      { title: "Tasty", content: "Very tasty recipes. Every dish I've made so far has been delicious.", stars: 5 },
+    ]
+  },
+  {
+    id: 4,
+    productName: "Keto Diet Plan",
+    name: "Jane Smith",
+    stars: "4.6",
+    price: "$25",
+    imageUrl: "/assets/product-img/imgone.png",
+    description: "A comprehensive keto diet plan by Jane Smith, designed to help you lose weight and improve your overall health.An insightful tarot reading session with Luna Lovegood, offering clarity and guidance on various life issue",
+    reviews: [
+      { title: "Great plan", content: "Very effective and easy to follow. I've lost 10 pounds in the first month and I feel fantastic.", stars: 5 },
+      { title: "Helpful", content: "Helped me a lot in my diet. The meal plans are varied and delicious, making it easy to stick to the diet.", stars: 4 },
+      { title: "Good", content: "Good diet plan, effective. The recipes are tasty and the plan is well-structured.", stars: 4 },
+      { title: "Nice", content: "Nice and effective plan. It's helped me understand how to eat healthier.", stars: 4 },
+      { title: "Effective", content: "Very effective diet plan. I've seen significant improvements in my energy levels and overall health.", stars: 5 },
+      { title: "Loved it", content: "Loved the diet plan. It's not just about weight loss, but also about feeling better and healthier.", stars: 5 },
+      { title: "Okay", content: "It was okay, could have been better. Some of the recipes were a bit bland.", stars: 3 },
+      { title: "Detailed", content: "Very detailed and effective. It covers everything you need to know about the keto diet.", stars: 4 },
+      { title: "Fantastic", content: "Fantastic diet plan. It's easy to follow and has produced great results for me.", stars: 5 },
+      { title: "Good", content: "Good plan, worth the money. It makes following a keto diet much simpler.", stars: 4 },
+    ]
+  },
 ];
 
 export const HotNewproductData = [
-  { id: 1, productName: "Advanced Tarot Techniques", name: "Mystic Meg", stars: "4.9", price: "$18", imageUrl: "/assets/product-img/imgone.png" },
-  { id: 2, productName: "Tokyo Travel Guide", name: "Jane Doe", stars: "4.4", price: "$22", imageUrl: "/assets/product-img/imgone.png" },
-  { id: 3, productName: "Vegan Dessert Recipes", name: "Jamie Oliver", stars: "4.8", price: "$28", imageUrl: "/assets/product-img/imgone.png" },
-  { id: 4, productName: "Mediterranean Diet Plan", name: "Dr. Health", stars: "4.5", price: "$20", imageUrl: "/assets/product-img/imgone.png" },
+  {
+    id: 5,
+    productName: "Advanced Tarot Techniques",
+    name: "Mystic Meg",
+    stars: "4.9",
+    price: "$18",
+    imageUrl: "/assets/product-img/imgone.png",
+    description: "Advanced tarot reading techniques by Mystic Meg, designed to deepen your understanding and practice.",
+    reviews: [
+      { title: "Very advanced", content: "Loved the advanced techniques. They are well-explained and easy to follow, even for someone with some experience in tarot reading.An insightful tarot reading session with Luna Lovegood, offering clarity and guidance on various life issue", stars: 5 },
+      { title: "Amazing", content: "Amazing techniques. They have really helped deepen my understanding and practice.", stars: 5 },
+      { title: "Good", content: "Good techniques, very useful. I've already started incorporating them into my readings.", stars: 4 },
+      { title: "Detailed", content: "Very detailed and advanced. It's clear that a lot of thought and expertise went into this book.", stars: 5 },
+      { title: "Great", content: "Great techniques. They are practical and have enhanced my readings significantly.", stars: 5 },
+      { title: "Insightful", content: "Very insightful. I've learned a lot of new methods and approaches.", stars: 4 },
+      { title: "Fantastic", content: "Fantastic techniques. This book is a must-have for any serious tarot reader.", stars: 5 },
+      { title: "Good", content: "Good book, worth the money. It's helped me grow as a tarot reader.", stars: 4 },
+      { title: "Very Good", content: "Very good techniques. They have added depth and nuance to my readings.", stars: 5 },
+      { title: "Excellent", content: "Excellent techniques, highly recommend. Mystic Meg is truly a master of her craft.", stars: 5 },
+    ]
+  },
+  {
+    id: 6,
+    productName: "Cooking Masterclass",
+    name: "Jamie Oliver",
+    stars: "4.8",
+    price: "$50",
+    imageUrl: "/assets/product-img/imgone.png",
+    description: "A cooking masterclass with Jamie Oliver, teaching you essential cooking techniques and delicious recipes.An insightful tarot reading session with Luna Lovegood, offering clarity and guidance on various life issue",
+    reviews: [
+      { title: "Fantastic", content: "Fantastic class, learned so much. Jamie's teaching style is engaging and easy to follow.", stars: 5 },
+      { title: "Great Class", content: "Great class, very informative. I've improved my cooking skills a lot.", stars: 5 },
+      { title: "Good", content: "Good class, learned a lot. The recipes are delicious and the techniques are practical.", stars: 4 },
+      { title: "Very helpful", content: "Very helpful class. It's boosted my confidence in the kitchen.", stars: 5 },
+      { title: "Loved it", content: "Loved the masterclass. Jamie is an amazing teacher and his passion for cooking is contagious.", stars: 5 },
+      { title: "Useful", content: "Very useful class. I've learned a lot of new techniques and recipes.", stars: 4 },
+      { title: "Excellent", content: "Excellent masterclass. It's been a great learning experience.", stars: 5 },
+      { title: "Good", content: "Good class, worth the money. It's helped me become a better cook.", stars: 4 },
+      { title: "Amazing", content: "Amazing class. Jamie's tips and tricks are invaluable.", stars: 5 },
+      { title: "Very Good", content: "Very good class. I've learned a lot of new skills and recipes.", stars: 5 },
+    ]
+  },
+  {
+    id: 7,
+    productName: "Digital Photography Basics",
+    name: "Ansel Adams",
+    stars: "4.7",
+    price: "$35",
+    imageUrl: "/assets/product-img/imgone.png",
+    description: "A beginner's guide to digital photography by Ansel Adams, covering essential techniques and tips for capturing stunning photos.",
+    reviews: [
+      { title: "Great Guide", content: "Great guide for beginners. It covers all the basics and provides useful tips for improving your photography skills.", stars: 5 },
+      { title: "Informative", content: "Very informative and well-written. It's helped me understand the fundamentals of digital photography.", stars: 4 },
+      { title: "Loved it", content: "Loved this guide. It's easy to understand and the examples are very helpful.", stars: 5 },
+      { title: "Good Book", content: "Good book for beginners. It covers a lot of ground and is very practical.", stars: 4 },
+      { title: "Useful", content: "Very useful guide. It's helped me take better photos and understand my camera better.", stars: 5 },
+      { title: "Fantastic", content: "Fantastic guide, highly recommend. It's a must-read for anyone new to photography.", stars: 5 },
+      { title: "Very Good", content: "Very good book. It explains the technical aspects of photography in a simple and understandable way.", stars: 4 },
+      { title: "Great", content: "Great guide for beginners. It's comprehensive and easy to follow.", stars: 5 },
+      { title: "Nice Book", content: "Nice book with lots of useful information. It's helped me improve my photography skills.", stars: 4 },
+      { title: "Excellent", content: "Excellent guide. Ansel Adams is a great teacher and his passion for photography is evident in every page.", stars: 5 },
+    ]
+  },
+  {
+    id: 8,
+    productName: "Yoga for Beginners",
+    name: "Yogi Bhajan",
+    stars: "4.5",
+    price: "$22",
+    imageUrl: "/assets/product-img/imgone.png",
+    description: "A beginner's guide to yoga by Yogi Bhajan, including basic poses, breathing techniques, and meditation practices.",
+    reviews: [
+      { title: "Great for beginners", content: "Great book for beginners. The instructions are clear and easy to follow.", stars: 5 },
+      { title: "Very helpful", content: "Very helpful guide. It's made my introduction to yoga enjoyable and stress-free.", stars: 4 },
+      { title: "Good", content: "Good book, learned a lot. The poses are well-explained and the illustrations are very helpful.", stars: 4 },
+      { title: "Nice", content: "Nice guide, very informative. It's helped me start my yoga practice with confidence.", stars: 4 },
+      { title: "Excellent", content: "Excellent guide for beginners. The explanations are simple and the practices are easy to follow.", stars: 5 },
+      { title: "Loved it", content: "Loved this guide. It's a great resource for anyone new to yoga.", stars: 5 },
+      { title: "Okay", content: "It was okay, could have been more detailed. Some poses were not explained in depth.", stars: 3 },
+      { title: "Good Book", content: "Good book, worth the money. It's a great starting point for anyone interested in yoga.", stars: 4 },
+      { title: "Very Good", content: "Very good guide. It's helped me understand the basics of yoga and its benefits.", stars: 4 },
+      { title: "Fantastic", content: "Fantastic guide. Yogi Bhajan is an excellent teacher and his book is a great introduction to yoga.", stars: 5 },
+    ]
+  },
 ];
 
+
+
 export const TopDiscountProduct = [
-  { id: 1, productName: "Vanilla Milkshake recipe", name: "Mystic Meg", stars: "4.9", price: "$18", imageUrl: "/assets/product-img/imgone.png" },
-  { id: 2, productName: "Dummy Data", name: "Jane Doe", stars: "4.4", price: "$22", imageUrl: "/assets/product-img/imgone.png" },
-  { id: 3, productName: "Chocolate Recipe", name: "Jamie Oliver", stars: "4.8", price: "$28", imageUrl: "/assets/product-img/imgone.png" },
-  { id: 4, productName: "Greek Diet Plan", name: "Dr. Health", stars: "4.5", price: "$20", imageUrl: "/assets/product-img/imgone.png" },
+  {
+    id: 9,
+    productName: "Ultimate Coding Bootcamp",
+    name: "Alice Johnson",
+    stars: "4.9",
+    originalPrice: "$200",
+    discountedPrice: "$150",
+    discount: "25%",
+    imageUrl: "/assets/product-img/imgone.png",
+    description: "An intensive coding bootcamp designed to take you from beginner to advanced coder in just a few months.",
+    reviews: [
+      { title: "Excellent course", content: "Very comprehensive and well-structured. The instructors were knowledgeable and supportive.", stars: 5 },
+      { title: "Highly recommend", content: "Great value for money, especially with the discount. Learned a lot in a short amount of time.", stars: 5 },
+      { title: "Challenging but worth it", content: "The bootcamp was challenging, but it was worth it. I feel much more confident in my coding skills now.", stars: 4 },
+      { title: "Great experience", content: "Amazing learning experience. The projects were practical and relevant to the industry.", stars: 5 },
+      { title: "Loved it", content: "Loved the bootcamp. It was intense but very rewarding. I landed a job right after completing it.", stars: 5 },
+    ]
+  },
+  {
+    id: 10,
+    productName: "Digital Marketing Mastery",
+    name: "Mark Thompson",
+    stars: "4.7",
+    originalPrice: "$100",
+    discountedPrice: "$75",
+    discount: "25%",
+    imageUrl: "/assets/product-img/imgone.png",
+    description: "A complete guide to mastering digital marketing, including SEO, social media, and content marketing strategies.",
+    reviews: [
+      { title: "Very informative", content: "Learned a lot about digital marketing. The course content was up-to-date and well-presented.", stars: 5 },
+      { title: "Good value", content: "Good value for money, especially with the discount. The course provided a solid foundation in digital marketing.", stars: 4 },
+      { title: "Practical insights", content: "The course offered practical insights and actionable strategies. It's been very helpful for my business.", stars: 5 },
+      { title: "Great course", content: "Great course, very comprehensive. The instructor was engaging and knowledgeable.", stars: 5 },
+      { title: "Recommended", content: "Highly recommended for anyone looking to get into digital marketing. The discount was an added bonus.", stars: 5 },
+    ]
+  },
+  {
+    id: 11,
+    productName: "Mindfulness and Meditation",
+    name: "Sarah Lee",
+    stars: "4.8",
+    originalPrice: "$50",
+    discountedPrice: "$35",
+    discount: "30%",
+    imageUrl: "/assets/product-img/imgone.png",
+    description: "A course on mindfulness and meditation techniques to reduce stress and improve mental clarity.",
+    reviews: [
+      { title: "Very calming", content: "The course was very calming and insightful. I've incorporated the techniques into my daily routine.", stars: 5 },
+      { title: "Helpful", content: "Very helpful for managing stress. The instructor's voice is soothing and the exercises are effective.", stars: 4 },
+      { title: "Great content", content: "Great content, well-structured. It's helped me become more mindful and present.", stars: 5 },
+      { title: "Loved it", content: "Loved the meditation practices. They are easy to follow and have made a positive impact on my life.", stars: 5 },
+      { title: "Highly recommend", content: "Highly recommend this course. The discount made it even more worthwhile.", stars: 5 },
+    ]
+  },
+  {
+    id: 12,
+    productName: "Photography Essentials",
+    name: "James Parker",
+    stars: "4.6",
+    originalPrice: "$75",
+    discountedPrice: "$55",
+    discount: "27%",
+    imageUrl: "/assets/product-img/imgone.png",
+    description: "A beginner's course in photography, covering the essentials of composition, lighting, and camera settings.",
+    reviews: [
+      { title: "Great for beginners", content: "Perfect for beginners. The course is easy to understand and follow.", stars: 5 },
+      { title: "Very informative", content: "Very informative. I've learned a lot about photography basics.", stars: 4 },
+      { title: "Good value", content: "Good value for the price, especially with the discount. The course is well worth it.", stars: 5 },
+      { title: "Enjoyed it", content: "Enjoyed the course. It has given me a solid foundation to build on.", stars: 5 },
+      { title: "Recommended", content: "Recommended for anyone new to photography. The instructor explains concepts clearly.", stars: 4 },
+    ]
+  },
 ];
+
+
 
 
 // ------------&&-------------
@@ -780,7 +1011,7 @@ export const productListings = [
 
 
 
-import { User, CreditCard, Users, LifeBuoy, Settings, Keyboard, Plus, Coins } from 'lucide-react';
+import { User, CreditCard, Users, LifeBuoy, Settings, Keyboard, Plus, Coins, ListOrdered, MapPin, Contact2, Gift, Wallet, ClipboardList, Star, AlertCircle, Heart, CoinsIcon } from 'lucide-react';
 export const headerLinks = [
   {
     label: 'Community',
@@ -881,8 +1112,8 @@ export const AMICO_PNG = "\amico.png"
 export const BLOCK_PNG = "\Chart.png"
 export const BLOCK_PNG2 = "\Frame (1).png"
 export const BG_IMAGE = "https://images.unsplash.com/photo-1539597833161-fd52d6ee5d8b?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjU2fHx5ZWxsb3clMjBiYWNrZ3JvdW5kJTIwaW1hZ2V8ZW58MHwwfDB8fHww"
-
-
+export const MOBILE_PAYMENT = '/cashless-payment.png'
+export const Coin = '/dollar.png'
 
 
 export const faqs = [
@@ -1266,3 +1497,84 @@ export const COUPONS = [
   { code: 'DISCOUNT20', value: 20 },
   { code: 'DISCOUNT30', value: 30 },
 ];
+
+export const states = [
+  { name: "California" },
+  { name: "New York" },
+  { name: "Texas" },
+  { name: "Florida" },
+  { name: "Illinois" },
+];
+
+
+// reviews-ratings 
+
+export const reviews = [
+  {
+    stars: 5,
+    name: 'italian pasta',
+    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+  },
+  {
+    stars: 4,
+    name: 'mystic tarrot card',
+    description: 'Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.',
+  },
+  {
+    stars: 3,
+    name: 'French fries',
+    description: 'Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.',
+  },
+  {
+    stars: 5,
+    name: 'Web3 Novel',
+    description: 'Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+  },
+];
+
+export const sidebarlinks = [
+  { title: "My Orders", icon: ListOrdered, href: "/your-account" },
+  { title: "Profile Information", icon: User, href: "/your-account/my-profile" },
+  { title: "Manage Addresses", icon: MapPin, href: "/your-account/manage-address" },
+  { title: "Contact Us", icon: Contact2, href: "/your-account/contact-us" },
+  { title: "Gift Cards", icon: Gift, href: "#" },
+  { title: "Saved UPI", icon: CreditCard, href: "#" },
+  { title: "Saved Cards", icon: Wallet, href: "#" },
+  { title: "My Coupons", icon: ClipboardList, href: "#" },
+  { title: "My Reviews & Ratings", icon: Star, href: "/your-account/reviews-ratings" },
+  { title: "All Notifications", icon: AlertCircle, href: "#" },
+  { title: "My Wishlist", icon: Heart, href: "/your-account/wishlist" },
+  { title: "Clamio Coins", icon: CoinsIcon, href: "/your-account/clamio-coins" },
+];
+
+// data.js
+export const colourOptions = [
+  { value: "red", label: "Red" },
+  { value: "blue", label: "Blue" },
+  { value: "green", label: "Green" },
+  { value: "yellow", label: "Yellow" },
+  { value: "purple", label: "Purple" },
+  { value: "orange", label: "Orange" },
+  { value: "pink", label: "Pink" },
+  { value: "brown", label: "Brown" }
+];
+
+export const CATEGORY = [
+  { value: "tarot Card Reading", label: "Tarot Card Reading" },
+  { value: "travel Guide", label: "Travel Guide" },
+  { value: "diet Plan", label: "Diet Plan" },
+  { value: "e-Sports Guide", label: "E-Sports Guide" },
+  { value: "food Recipes", label: "Food Recipes" },
+  { value: "digital Art", label: "Digital Art" },
+] 
+
+
+export const fansOptions = [
+  { value: 'fan1', label: 'Alice Johnson' },
+  { value: 'fan2', label: 'Bob Smith' },
+  { value: 'fan3', label: 'Charlie Brown' },
+  { value: 'fan4', label: 'Diana Prince' },
+  { value: 'fan5', label: 'Edward Davis' },
+  { value: 'fan6', label: 'Fiona Lee' },
+
+]

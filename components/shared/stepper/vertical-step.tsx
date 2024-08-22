@@ -143,7 +143,7 @@ const VerticalStep = React.forwardRef<HTMLDivElement, VerticalStepProps>(
 						"stepper__vertical-step-container",
 						"flex items-center",
 						variant === "line" &&
-							"border-s-[3px] data-[active=true]:border-primary py-2 ps-3",
+							"border-s-[3px]  data-[active=true]:border-primary py-2 ps-3",
 						styles?.["vertical-step-container"],
 					)}
 				>
@@ -173,7 +173,7 @@ const VerticalStep = React.forwardRef<HTMLDivElement, VerticalStepProps>(
 					className={cn(
 						"stepper__vertical-step-content",
 						!isLastStep && "min-h-4",
-						variant !== "line" && "ps-[--step-icon-size]",
+						variant !== "line" && "md:ps-[--step-icon-size]",
 						variant === "line" && orientation === "vertical" && "min-h-0",
 						styles?.["vertical-step-content"],
 					)}
