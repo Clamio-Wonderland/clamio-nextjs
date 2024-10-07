@@ -103,31 +103,39 @@ export async function registerUser(input:TUserRegister) {
 //creator register
   //step 1: user register onClick next
   //step 2: creator register and redirect to login
-export async function registerCreator(input:TCreatorRegister) {
-  try {
-  const session = await auth();
-  const user = session?.user;
-
-  if(user?.isCreator){
-    throw new Error("You are already a creator. Please login to continue")
+  export async function registerCreator(input: FormData) {
+    try {
+      const session = await auth();
+      const user = session?.user;
+  
+      if (user?.isCreator) {
+        throw new Error("You are already a creator. Please login to continue");
+      }
+  
+      const response = await axios.post(
+        `${process.env.BASE_API_URL}/api/v1/user-auth/login`,
+        input, // Send FormData directly
+        {
+          headers: {
+            "Content-Type": "multipart/form-data", // Ensure the correct content type
+          },
+        }
+      );
+  
+      const data = response.data;
+      console.log("data in registerCreator>>>>>>>>>>", data);
+  
+      return { message: "User registered successfully", success: true };
+    } catch (error: any) {
+      console.error("Error in registerCreator>>>>>>>>:", error.response?.data);
+  
+      return {
+        message: error.response?.data?.message || "Registration failed",
+        success: false,
+      };
+    }
   }
-
-  const { title, description, website, social_link, expertise, bank_account, avatar} = input
-
-    const response = await axios.post(`${process.env.BASE_API_URL}/api/v1/user-auth/login`,{title, description, website, social_link, expertise, bank_account, avatar});
-    const data = response.data;
-    console.log("data in registerUser>>>>>>>>>>", data);
-
-    return {message: "user logged in successfully", success: true}
-
-  } catch (error: any) {
-    console.error("error in registerUser>>>>>>>>:", error.response?.data);
-
-    // Return error object with the message from the API response
-    return { message: error.response?.data?.message || "Signup failed", success: false };
-  }
-}
-
+  
 
 
 

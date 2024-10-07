@@ -1,10 +1,10 @@
-// components/UserRegister.tsx
 'use client';
 import { useForm } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 
 import { toast } from 'sonner';
 import { Form, FormField, FormItem, FormLabel, FormControl, FormMessage } from '@/components/ui/form';
+
 import { useRouter } from 'next/navigation';
 import { UserRegisterSchema } from '@/schemas';
 import { login, registerUser } from '@/action/login';
@@ -12,6 +12,7 @@ import { useTransition } from 'react';
 import { Button } from '../ui/button';
 import NextForm from './NextForm';
 import { useState } from 'react';
+import { Input } from 'antd';
 
 const CreatorRegister = () => {
   const [isPending, startTransition] = useTransition();
@@ -34,16 +35,13 @@ const CreatorRegister = () => {
     startTransition(async () => {
       const result = await registerUser(values);
       if (result.success) {
-        // toast.success(result.message);
         const result1 = await login(values);
         if(result1.success){
             toast.success(result1.message);
             setShowNextForm(true);
-        }
-        else{
+        } else {
             toast.error(result1.message);
         }
-       // Show NextForm after successful registration
       } else {
         toast.error(result.message);
       }
@@ -62,7 +60,7 @@ const CreatorRegister = () => {
                 <FormItem>
                   <FormLabel>Username*</FormLabel>
                   <FormControl>
-                    <input type="text" placeholder="Your name" {...field} className="input-class" />
+                    <Input type="text" placeholder="Your name" {...field} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -75,7 +73,7 @@ const CreatorRegister = () => {
                 <FormItem>
                   <FormLabel>Email*</FormLabel>
                   <FormControl>
-                    <input type="email" placeholder="Your email" {...field} className="input-class" />
+                    <Input type="email" placeholder="Your email" {...field} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
@@ -88,7 +86,7 @@ const CreatorRegister = () => {
                 <FormItem>
                   <FormLabel>Password*</FormLabel>
                   <FormControl>
-                    <input type="password" placeholder="Password" {...field} className="input-class" />
+                    <Input type="password" placeholder="Password" {...field} />
                   </FormControl>
                   <FormMessage />
                 </FormItem>
