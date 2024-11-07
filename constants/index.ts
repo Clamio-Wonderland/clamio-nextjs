@@ -23,12 +23,12 @@ const headerLinksDashboard = [
   {
     label: 'Dashboard',
     route: '/dashboard',
-   
+
   },
   {
     label: 'Product',
     route: '/',
-    
+
   },
   {
     label: 'User',
@@ -43,7 +43,7 @@ const headerLinksDashboard = [
   {
     label: 'Settings',
     route: '/settings',
-   
+
   },
 ];
 export const headerLinkstwo = [
